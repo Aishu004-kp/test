@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="pro1.css">
+    <link rel="stylesheet" href="jspro.html">
+    <style>
+        h1{
+    margin: 0;
+    font-size: 100px;
+    background-image: url("img/240610-beauty-awards-2024-skincare-winners-vl-social-91be20.webp" );
+    height: 100px;
+    width: 1000px;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.btm{
+    margin-top: 30px;
+    width: 110px;
+    height: 30px;
+ 
+}
+
+.bn{
+    width: 150px;
+    height: 30px;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+        }
+        .quantity-controls button {
+            padding: 5px 10px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <Center ><i><h1 style="position: relative; top: .5cm;">SKINSTORE</h1></i></Center>
+
+    <h2 style="text-align: center;">Your Cart</h2>
+    <div class="cart-item">
+        <span> Skintific 5x Ceramide cleanser </span>
+        <div class="quantity-controls">
+            <button onclick="decreaseQuantity()">-</button>
+            <span id="quantity">1</span>
+            <button onclick="increaseQuantity()">+</button>
+        </div>
+        <span>Price: ₹<span id="price">499</span></span>
+    </div>
+    <div style="text-align: right; margin-top: 20px;">
+        <strong>Total: ₹<span id="total-price">499</span></strong>
+    </div>
+   <input type="button" class="btm" value="BUY NOW" style="background-color: rgb(212, 147, 6);  ">
+ <center>  <input type="button"  value="PROCEED TO PAY" style="background-color: rgb(15, 146, 50); width: 150px; height: 30px; "></center>
+<!-- <a href="jspro.html"></a><input type="button" class="bn" value="REMOVE" style="background-color: rgb(200, 34, 40); float:right;    margin-top: -30px; "> -->
+<a href="jspro.html"><button class="bn" style="float: right; background-color: rgb(213, 27, 27);  margin-top: -30px; ">REMOVE</button>
+
+ 
+
+    <script>
+        let quantity = 1;
+        const pricePerItem = 499;
+
+        function increaseQuantity() {
+            quantity++;
+            updateCart();
+        }
+
+        function decreaseQuantity() {
+            if (quantity > 1) {
+                quantity--;
+                updateCart();
+            }
+        }
+
+        function updateCart() {
+            document.getElementById('quantity').innerText = quantity;
+            document.getElementById('total-price').innerText = (quantity * pricePerItem).toFixed(2);
+        }
+    </script>
+</body>
+</html>

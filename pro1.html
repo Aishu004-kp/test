@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="checkout.html">
+    <link rel="stylesheet" href="pro1.css">
+</head>
+<body>
+    <center><i><h1 style="position: relative; top: .5cm;">SKINSTORE</h1></i></center>
+
+    <div>
+       <h2 style="text-align: center;"><b>Foxtale</b></h2>
+       <h3 style="text-align: center;"><i>Acne Control Cleanser with Salicylic Acid</i></h3>
+      <div>
+        <p style="width: 10cm; position: relative;">
+         <b><strong>Acne Control Cleanser with Salicylic Acid</strong></b><br>
+             The cleanser is gentle on the skin and is suitable for all skin types,
+            especially oily and acne-prone skin. It effectively kills
+             acne-causing bacteria, unclogs pores, and regulates oil production, without drying your skin out. Rich in hydration, it’s ideal for daily use by all skin types.
+        </p>
+        <img src="img/fox1.webp" width="200px" height="200px" class="ai">
+        <img src="img/fox 2.webp" width="200px" height="200px" class="ai">
+        <img src="img/fox3.jpg" width="200px" height="200px" class="ai">
+
+
+        <div style="text-align: center; margin-top: 10px;">
+            <button onclick="decreaseQuantity()">-</button>
+            <input type="text" id="quantity" value="1" readonly style="width: 30px; text-align: center;">
+            <button onclick="increaseQuantity()">+</button>
+        </div>
+      </div>
+      
+      <a href="checkout.html"><button class="but" style="float: right;">BUY NOW</button></a>
+      <button class="btn" onclick="addToCart('Foxtale Acne Control Cleanser', 399)" style="float: right;">Add to Cart</button>
+
+    </div>
+
+    <script>
+        function increaseQuantity() {
+            let quantity = document.getElementById("quantity").value;
+            quantity = parseInt(quantity) + 1;
+            document.getElementById("quantity").value = quantity;
+        }
+
+        function decreaseQuantity() {
+            let quantity = document.getElementById("quantity").value;
+            if (quantity > 1) {
+                quantity = parseInt(quantity) - 1;
+                document.getElementById("quantity").value = quantity;
+            }
+        }
+
+        function addToCart(productName, price) {
+            let quantity = document.getElementById("quantity").value;
+            alert(`${productName} added to cart. Quantity: ${quantity}. Total price: $${price * quantity}`);
+            // Here you could add more logic to actually add it to a cart in your application
+        }
+    </script>
+</body>
+</html>

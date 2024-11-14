@@ -1,0 +1,63 @@
+h1{
+    margin: 0;
+font-size: 100px;
+background-image: url("img/240610-beauty-awards-2024-skincare-winners-vl-social-91be20.webp" );
+height: 100px;
+width: 1000px;
+background-repeat: no-repeat;
+background-position: center;
+color: transparent;
+background-clip: text;
+-webkit-background-clip: text;
+}
+
+
+
+
+
+img{
+    margin-top: -19px;
+}
+ul{
+    margin-left: 1300px;
+    list-style-type: none;
+    color:black;
+    font-size: 20px;
+    overflow: hidden;
+    word-spacing: 20px;
+    margin-top: 20px;
+    
+}
+div{
+    display: flex;
+   flex-wrap: wrap;
+   /* background-image: linear-gradient(rgb(223, 151, 187),rgb(226, 130, 200)); */
+   
+}
+
+.div
+{
+    margin-top: 1cm;
+    margin-left: 1cm;
+    text-align: center;
+    display: flex;
+flex-direction: column;
+
+}
+.but{
+    height: 40px;
+    width: 300px;
+    font-size: 20px;
+background-image: url("img/240610-beauty-awards-2024-skincare-winners-vl-social-91be20.webp" );
+/* height: 100px;
+width: 1000px; */
+background-repeat: no-repeat;
+background-position: center;
+color: transparent;
+background-clip: text;
+-webkit-background-clip: text;
+border-radius: 20%;
+border: 1px solid rgb(199, 84, 132);
+}
+
+    
